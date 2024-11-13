@@ -45,7 +45,7 @@ export default function Component() {
       {/* Hero Section */}
       <section className="relative h-screen">
         <img
-          src="./img/1.jpg"
+          src="../img/1.jpg"
           alt="Shangri La"
           fill
           className="object-cover h-full"
