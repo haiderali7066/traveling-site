@@ -12,11 +12,11 @@ export default function Component() {
   }
 
   const destinations = [
-    { name: "Neelum Valley", img: "/placeholder.svg" },
-    { name: "Skardu", img: "/placeholder.svg" },
-    { name: "Shogran Valley", img: "/placeholder.svg" },
-    { name: "Hunza Valley", img: "/placeholder.svg" },
-    { name: "Fairy Meadows", img: "/placeholder.svg" }
+    { name: "Neelum Valley", img: "/img/9.jpg" },
+    { name: "Skardu", img: "/img/6.jpg" },
+    { name: "Shogran Valley", img: "/img/4.jpg" },
+    { name: "Hunza Valley", img: "/img/7.jpg" },
+    { name: "Fairy Meadows", img: "/img/8.jpg" }
   ]
 
   const tourPackages = [
@@ -45,10 +45,10 @@ export default function Component() {
       {/* Hero Section */}
       <section className="relative h-screen">
         <img
-          src="/placeholder.svg"
+          src="/img/1.jpg"
           alt="Shangri La"
           fill
-          className="object-cover"
+          className="object-cover h-full"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -137,7 +137,7 @@ export default function Component() {
       </section>
 
       {/* Quote Request */}
-      <section className="py-12 bg-blue-500">
+      <section className="py-12 bg-blue-500 bg-opacity-70">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Request a Custom Travel Quote</h2>
           <div className="flex justify-center gap-4">
@@ -223,7 +223,7 @@ export default function Component() {
       </section>
 
       {/* Popular Packages */}
-      <section className="py-16">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Popular Tour Packages</h2>
@@ -241,7 +241,7 @@ export default function Component() {
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <img
-                  src="/placeholder.svg"
+                  src="/img/11.jpg"
                   alt={pkg.title}
                   width={400}
                   height={300}
@@ -264,34 +264,29 @@ export default function Component() {
       </section>
 
       {/* Promotional Section */}
-      <section className="relative py-24">
-        <img
-          src="/placeholder.svg"
-          alt="Explore Pakistan"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Explore Pakistan with us.
-            </h2>
-            <p className="text-xl text-white mb-4">
-              Avail Discounted Tours <span className="text-orange-400">Up to 30% off</span>
-            </p>
-            <p className="text-gray-200 mb-8">
-              Let's help in the amazing life experience of traveling to Pakistan. 
-              Hassle-free fully managed tours with an option to customization as per 
-              client needs, guided tours, safe and secure travel, best accommodations 
-              and quality food.
-            </p>
-            <button className="bg-white text-blue-600 font-bold py-2 px-4 rounded">
-              See Promotional Tours
-            </button>
-          </div>
-        </div>
-      </section>
+      <section className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(/img/12.jpg)' }}>
+  <div className="absolute inset-0 bg-black/50" />
+  <div className="relative container mx-auto px-4">
+    <div className="max-w-2xl">
+      <h2 className="text-4xl font-bold text-white mb-4">
+        Explore Pakistan with us.
+      </h2>
+      <p className="text-xl text-white mb-4">
+        Avail Discounted Tours <span className="text-orange-400">Up to 30% off</span>
+      </p>
+      <p className="text-gray-200 mb-8">
+        Let's help in the amazing life experience of traveling to Pakistan. 
+        Hassle-free fully managed tours with an option to customization as per 
+        client needs, guided tours, safe and secure travel, best accommodations 
+        and quality food.
+      </p>
+      <button className="bg-white text-blue-600 font-bold py-2 px-4 rounded">
+        See Promotional Tours
+      </button>
+    </div>
+  </div>
+</section>
+
     </div>
   )
 }

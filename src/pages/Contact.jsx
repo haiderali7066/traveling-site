@@ -13,10 +13,10 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] lg:h-[60vh]">
         <img
-          src="/placeholder.svg?height=600&width=1200"
+          src="/img/3.jpg"
           alt="Contact Us"
           fill
-          className="object-cover"
+          className="object-cover w-full h-full"
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -62,15 +62,15 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <MapPin className="h-6 w-6 text-blue-500" />
-                  <span>123 Travel Street, Islamabad, Pakistan</span>
+                  <span>123 Travel Street, Lahore, Pakistan</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="h-6 w-6 text-blue-500" />
-                  <span>+92 123 456 7890</span>
+                  <span>+92 325 6036838</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="h-6 w-6 text-blue-500" />
-                  <span>info@pakistantravel.com</span>
+                  <span>info@AHMtravels.com</span>
                 </div>
               </div>
             </div>
@@ -89,11 +89,11 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-center mb-8">Our Location</h2>
           <div className="aspect-w-16 aspect-h-9">
             <img
-              src="/placeholder.svg?height=450&width=800"
+              src="/img/22.jpg"
               alt="Map"
               width={800}
               height={450}
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover h-full w-full"
             />
           </div>
         </motion.div>

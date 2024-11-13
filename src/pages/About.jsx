@@ -19,10 +19,10 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] lg:h-[60vh]">
         <img
-          src="/placeholder.svg?height=600&width=1200"
+          src="/img/2.jpg"
           alt="About Us"
           fill
-          className="object-cover"
+          className="object-cover w-full h-full"
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -52,10 +52,10 @@ export default function AboutPage() {
               </div>
               <div className="relative h-64 md:h-full">
                 <img
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/img/19.jpg"
                   alt="Our Journey"
                   fill
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover h-full w-full"
                 />
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative h-64 md:h-full">
                 <img
-                  src="/placeholder.svg?height=300&width=400"
+                  src="/img/20.jpg"
                   alt="Our Mission"
                   fill
                   className="rounded-lg object-cover"
