@@ -153,7 +153,7 @@ export default function AboutPage() {
                   src="/img/20.jpg"
                   alt="Our Mission"
                   fill
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover h-full w-full"
                 />
               </div>
               <div>
