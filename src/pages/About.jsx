@@ -9,9 +9,9 @@ export default function AboutPage() {
   }
 
   const teamMembers = [
-    { name: "John Doe", role: "Founder & CEO", img: "/placeholder.svg?height=150&width=150" },
-    { name: "Jane Smith", role: "Travel Expert", img: "/placeholder.svg?height=150&width=150" },
-    { name: "Mike Johnson", role: "Customer Relations", img: "/placeholder.svg?height=150&width=150" },
+    { name: "Ayesha", role: "Founder & CEO", img: "/img/a.jpg" },
+    { name: "Haider Ali", role: "Travel Expert", img: "/img/haider.webp" },
+    { name: "Mahdia", role: "Customer Relations", img: "/img/m.webp" },
   ]
 
   return (
