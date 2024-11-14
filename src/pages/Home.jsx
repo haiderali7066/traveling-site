@@ -12,9 +12,9 @@ export default function Component() {
   }
 
   const destinations = [
-    { name: "Neelum Valley", img: "/img/9.jpg" },
+    { name: "Neelum Valley", img: "./src/img/9.jpg" },
     { name: "Skardu", img: "/img/6.jpg" },
-    { name: "Shogran Valley", img: "/img/4.jpg" },
+    { name: "Shogran Valley", img: "../src/img/4.jpg" },
     { name: "Hunza Valley", img: "/img/7.jpg" },
     { name: "Fairy Meadows", img: "/img/8.jpg" }
   ]
@@ -45,7 +45,7 @@ export default function Component() {
       {/* Hero Section */}
       <section className="relative h-screen">
         <img
-          src="../img/1.jpg"
+          src="/src/img/1.jpg"
           alt="Shangri La"
           fill
           className="object-cover h-full"
