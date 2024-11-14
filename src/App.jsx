@@ -5,12 +5,15 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 import NoPage from "./pages/NoPage";
+import Navbar from "./components/Nav"
+import Footer from './components/Footer';
 
 
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar></Navbar>
       <Routes>
         <Route>
           <Route index element={<Home />} />
@@ -20,6 +23,7 @@ const App = () => {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
