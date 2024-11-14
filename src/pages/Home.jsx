@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { Phone, PhoneIcon, MapPin, Award, Leaf, Calendar, Users, Heart, Mountain, Tent, Snowflake } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Component() {
   const fadeIn = {
@@ -43,12 +44,12 @@ export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-96">
         <img
           src="/src/img/1.jpg"
           alt="Shangri La"
           fill
-          className="object-cover h-full"
+          className="object-cover h-full w-full"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -69,20 +70,20 @@ export default function Component() {
           <motion.h3 
             className="text-3xl md:text-5xl font-bold text-white mb-12"
             {...fadeIn}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.2 }}
           >
             The hidden World
           </motion.h3>
           <motion.div 
             className="flex gap-4"
             {...fadeIn}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.2 }}
           >
             <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded flex items-center">
-              <Phone className="mr-2 h-5 w-5" /> Call Now
+              <Phone className="mr-2 h-5 w-5" /><Link to='/about'> Call Now</Link>
             </button>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded flex items-center">
-              <PhoneIcon className="mr-2 h-5 w-5" /> Whatsapp
+              <PhoneIcon className="mr-2 h-5 w-5" /><Link to="/contact">Whatsapp</Link>
             </button>
           </motion.div>
         </div>
@@ -254,7 +255,7 @@ export default function Component() {
                 <div className="flex justify-between items-center p-4 border-t">
                   <p className="font-bold text-lg">Rs.{pkg.price}</p>
                   <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                    Book Now
+                    <Link to="/booking">Book Now</Link>
                   </button>
                 </div>
               </motion.div>
