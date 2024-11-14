@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import { motion } from "framer-motion"
 import { Phone, PhoneIcon, MapPin, Award, Leaf, Calendar, Users, Heart, Mountain, Tent, Snowflake } from 'lucide-react'
