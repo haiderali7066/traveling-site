@@ -29,7 +29,7 @@ export default function Footer() {
               Pakistan Address : 8-B, Iqbal Avenue Phase 1, Nazaria-e-Pakistan
               Rd, Lahore.
             </p>
-            <p>Phone : +92 321 410 6223</p>
+            <p>Phone : +92 346 6417 828</p>
             <p>Tel : +92 423 5183 937</p>
             <p>info@pakistantravelplaces.com</p>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="border-t border-zinc-800">
         <div className="container flex flex-col items-center gap-4 py-6 md:flex-row md:justify-between">
           <p className="text-sm text-zinc-400">
-            © 2024 Pakistan Travel Places. All rights reserved.
+            © 2024 Hadi Travels. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link

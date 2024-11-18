@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Facebook,
   Instagram,
@@ -7,11 +7,20 @@ import {
   Phone,
   Search,
   Twitter,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
+      {/* Top bar */}
       <div className="hidden border-b bg-background/95 py-2 sm:block">
         <div className="container flex items-center justify-between">
           <div className="flex gap-4">
@@ -20,14 +29,14 @@ export default function Navbar() {
               to="tel:+923214106223"
             >
               <Phone className="h-4 w-4" />
-              +92 321 410 6223
+              +92 325 6036 838
             </Link>
             <Link
               className="flex items-center gap-2 text-sm"
               to="mailto:info@pakistantravelplaces.com"
             >
               <Mail className="h-4 w-4" />
-              info@pakistantravelplaces.com
+              info@HADItravels.com
             </Link>
           </div>
           <div className="flex gap-4">
@@ -43,15 +52,20 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-20 place-items-end  pb-2">
-          <Link className="mr-6 flex items-center space-x-2" to="/">
+        <div className="container flex h-20 items-center justify-between">
+          {/* Logo */}
+          <Link className="flex items-center space-x-2" to="/">
             <img
               src="/placeholder.svg"
               alt="Hadi Travels"
               className="h-12 w-auto"
             />
           </Link>
+
+          {/* Desktop Nav */}
           <nav className="hidden flex-1 gap-6 md:flex md:justify-end md:pr-2">
             <Link
               className="font-medium transition-colors hover:text-foreground/80"
@@ -59,30 +73,6 @@ export default function Navbar() {
             >
               Home
             </Link>
-            {/* <Link
-              className="font-medium transition-colors hover:text-foreground/80"
-              to="/tour-packages"
-            >
-              Tour Packages
-            </Link>
-            <Link
-              className="font-medium transition-colors hover:text-foreground/80"
-              to="/book-transport"
-            >
-              Book a Transport
-            </Link>
-            <Link
-              className="font-medium transition-colors hover:text-foreground/80"
-              to="/destinations"
-            >
-              Destinations
-            </Link>
-            <Link
-              className="font-medium transition-colors hover:text-foreground/80"
-              to="/blog"
-            >
-              Blog
-            </Link> */}
             <Link
               className="font-medium transition-colors hover:text-foreground/80"
               to="/about"
@@ -96,29 +86,57 @@ export default function Navbar() {
               Contact
             </Link>
           </nav>
+
+          {/* Actions */}
           <div className="flex items-center gap-4">
-            <form className="hidden lg:block">
-              <div className="flex items-center gap-2">
-                {/* <input
-                  className="w-60 rounded-md border px-3 py-2"
-                  placeholder="Search..."
-                  type="search"
-                /> */}
-                <button
-                  className="rounded-md p-2 hover:bg-gray-100"
-                  type="submit"
-                >
-                  <Search className="h-4 w-4" />
-                  <span className="sr-only">Search</span>
-                </button>
-              </div>
-            </form>
-            <button className="md:hidden rounded-md p-2 hover:bg-gray-100">
-              <Menu className="h-6 w-6" />
+            <button
+              className="md:hidden rounded-md p-2 hover:bg-gray-100"
+              onClick={toggleMobileMenu}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
               <span className="sr-only">Toggle menu</span>
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <nav className="md:hidden bg-white border-t shadow-md">
+            <ul className="flex flex-col space-y-2 p-4">
+              <li>
+                <Link
+                  className="block py-2 px-4 text-sm font-medium hover:bg-gray-100"
+                  to="/"
+                  onClick={toggleMobileMenu}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="block py-2 px-4 text-sm font-medium hover:bg-gray-100"
+                  to="/about"
+                  onClick={toggleMobileMenu}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="block py-2 px-4 text-sm font-medium hover:bg-gray-100"
+                  to="/contact"
+                  onClick={toggleMobileMenu}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </header>
     </>
   );
