@@ -59,7 +59,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link className="flex items-center space-x-2" to="/">
             <img
-              src="/placeholder.svg"
+              src="/img/logo.png"
               alt="Hadi Travels"
               className="h-12 w-auto"
             />
